@@ -6,6 +6,8 @@ public class JavaStringDemo2 {
 		
 		String empCity = "NewYork"; 
 		
+		System.out.println(empCity.isEmpty()); //false
+		
 		// empCity[0] = N
 		// empCity[1] = e
 		// empCity[2] = w
@@ -38,7 +40,7 @@ public class JavaStringDemo2 {
 		
 		System.out.println(empCity.replace('N', 'X'));
 		
-		System.out.println(empCity.isEmpty()); //false
+		
 		
 	}
 
