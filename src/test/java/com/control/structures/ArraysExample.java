@@ -58,7 +58,8 @@ public class ArraysExample {
 		System.out.println("advanced forloop starts below");
 			
 			for (String empCity : empCities) {  //int --> Integer
-				System.out.println(empCity); 
+				System.out.println(empCity);
+				//selenium. sendKeys(empCity)
 			}
 			
 		System.out.println("advanced forloop ends above");
