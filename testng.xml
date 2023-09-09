@@ -1,15 +1,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="SpeakLangTestSuite" verbose="1">
+<suite name="SpeakLangTestSuite" verbose="1" parallel="methods" thread-count="2">
+<parameter name="browser"  value="Edge"/>
 	<test name="AppTesting">
-		<groups>
-			<run>
-				<include name="SmokeTest" />
-			</run>
-		</groups>
 		<classes>
-			<class name="com.testng.demo.TestNGDemo1" />
-			<class name="com.testng.demo.TestNGDemo2" />
+			<class name="com.testng.demo.SeleniumDemo" />
 		</classes>
 	</test>
-</suite>	
+</suite>

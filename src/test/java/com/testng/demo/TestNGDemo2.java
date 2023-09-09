@@ -19,6 +19,11 @@ public class TestNGDemo2 {
 		displayEmpdetails();
 	}
 	
+	@Test (groups = { "RegressionTest" })
+	public void testcase5() {
+		displayEmpdetails();
+	}
+	
 	public void displayEmpdetails() {
 		System.out.println("EmpName: "+empName);
 		System.out.println("EmpId: "+empId);
