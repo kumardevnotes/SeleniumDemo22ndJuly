@@ -84,7 +84,7 @@ Issues:
 3. WebElement details not coming on the script
 
 
-    ::Selenium methods::
+    :: Selenium methods::
 
 get(String url) --> This method launches your application
 navigate().back() --> this method navigates back the browser
@@ -92,13 +92,19 @@ navigate().forward() --> this method navigates forwards the browser
 navigate().refresh() --> this method refreshed the browser
 maximize() --> This method will maximize the browser
 
+Dimension dimension = new Dimension(1920, 1080);
+setSize(dimension) --> This method will resie the window depending on the dimensions passed
+
 newWindow(WindowType.TAB) --> // Opens a new tab and switches to new tab
+
+getWindowHandle()-->
+getWindowHandles()-->
+switchToWindow()-->
 
 close() --> It will close current window
 quit() --> It will close all opned windows
 
-Dimension dimension = new Dimension(1920, 1080);
-setSize(dimension) --> This method will resie the window depending on the dimensions passed
+
 
 
 clear()-->we clear the text in text field
@@ -127,10 +133,6 @@ Alert.dismiss()-->
 
 findElement()-->
 findElements()-->
-
-getWindowHandle()-->
-getWindowHandles()-->
-switchToWindow()-->
 
 Select class in Selenium
 SelectByIndex()-->

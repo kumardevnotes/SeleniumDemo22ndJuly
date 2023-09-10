@@ -23,7 +23,6 @@ public class SeleniumDemo {
 			driver = new EdgeDriver();
 			break;
 		}
-		
 		// to maximize the browser
 		driver.manage().window().maximize();
 	}

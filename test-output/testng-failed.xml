@@ -6,8 +6,6 @@
       <class name="com.testng.demo.SeleniumDemo">
         <methods>
           <include name="launchApp"/>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
         </methods>
       </class> <!-- com.testng.demo.SeleniumDemo -->
     </classes>
