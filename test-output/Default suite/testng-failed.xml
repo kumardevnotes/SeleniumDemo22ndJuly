@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testng.demo.SeleniumDemo">
+      <class name="com.testng.demo.SeleniumMethods6">
         <methods>
           <include name="launchApp"/>
         </methods>
-      </class> <!-- com.testng.demo.SeleniumDemo -->
+      </class> <!-- com.testng.demo.SeleniumMethods6 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
