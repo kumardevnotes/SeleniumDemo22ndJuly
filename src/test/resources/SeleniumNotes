@@ -142,9 +142,14 @@ SelectByVisibleText()-->
 
 capture screenshot
 
+//Implicit and ExplicitWaits
+
    ::
    
 Page Object Model  - POM  -  it is a Design pattern - it is a best practice in automation
 pom.xml - > Project Object Model . It is an xml based project document
             -  you will add your dependencies/plugins/configurations
+            
+            
+            
 
