@@ -1,0 +1,16 @@
+Application:  https://www.speaklanguages.com/
+
+TestCase1: Verify homepage
+
+Steps to follow:
+1. Launch the application in Chrome -https://www.speaklanguages.com/
+2. Verify the app logo, search field, search button, login link, signup link and footer section
+
+
+TestCase2: Verify signup
+
+Steps to follow:
+1. Launch the application in Chrome -https://www.speaklanguages.com/
+2. Launch signup page
+3. Enter all the fileds fname, lname, email address, passwrd, DOB
+4. Verify signup by login with the email address and passwrd that you entered inStep 3

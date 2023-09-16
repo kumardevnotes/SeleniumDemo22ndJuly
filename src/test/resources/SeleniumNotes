@@ -152,4 +152,17 @@ pom.xml - > Project Object Model . It is an xml based project document
             
             
             
+How to develop automation scripts in real time ?
+
+1. Get the requirements (Jira Tickets, TestCases)
+2. Review testcases (Get it clarified and also get the required testdata)
+3. Findout positive and negative flows of the testcase
+4. Make sure you have working automation framework
+5. Create new packages, classes and testcases
+6. implement POM (Page Object model) -  methods, locators
+7. Develop TestNG testcases by adding valid assertions
+8. Fail or Pass the Testcase and verify the results
+            
+            
+            
 

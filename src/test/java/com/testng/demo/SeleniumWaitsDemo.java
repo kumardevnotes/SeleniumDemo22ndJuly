@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SeleniumMethods9 {
+public class SeleniumWaitsDemo {
 	/*
 	 * TestCase Title: Verify the language links on the homescreen
 	 * 
@@ -22,7 +22,7 @@ public class SeleniumMethods9 {
 	 */
 
 	@Test
-	public void verifyLangLinks() throws Exception {
+	public void seleniumWaitsDemo() throws Exception {
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -33,7 +33,6 @@ public class SeleniumMethods9 {
 		
 		//Selenium4 - implicit wait for the complete driver
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(180));
-		
 
 		//selenium4 - explicit wait - is used to make sure the button/link/image is loaded
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
