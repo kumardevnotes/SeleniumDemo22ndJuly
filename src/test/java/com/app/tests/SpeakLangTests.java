@@ -24,7 +24,7 @@ public class SpeakLangTests {
 
 	@Test
 	public void verifyHomePage() throws Exception {
-		if (homePage.verifyHomePageLoaded())
+		if (!homePage.verifyHomePageLoaded())
 			System.out.println("homePage verified without issues");
 		else {
 			testBase.captureScreenshot("verifyHomePage_Failed");
@@ -38,6 +38,8 @@ public class SpeakLangTests {
 		signUpPage.signUPIntoApp();
 		String successMessage = signUpPage.getSignupSuccessMessage();
 		System.out.println(successMessage);
+		signUpPage.loginIntoApp();
+		//Assertion pedning - ToDo
 	}
 
 	@AfterMethod

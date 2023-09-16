@@ -24,7 +24,10 @@ public class SignUpPage {
 	public By signUpBtn = By.xpath("//input[@value='Sign up']");
 	public By thankYouMessage = By.xpath("//h1[contains(text(),'Thank you')]");
 	
-	
+	public By logInLink = By.linkText("Log in");
+	public By login_emailAddressField = By.id("email_input");
+	public By login_pwdField = By.id("password_input");
+	public By login_loginBtn = By.id("login_button");
 	
 	public static String emailAddress  = "";
 	public static String pwd  = "";
@@ -74,5 +77,13 @@ public class SignUpPage {
 
 	public String getSignupSuccessMessage() {
 		return testBase.getText(thankYouMessage);
+	}
+	
+	public void loginIntoApp() throws Exception {
+		testBase.clickElement(logInLink);
+		testBase.enterText(login_emailAddressField, emailAddress);
+		testBase.enterText(login_pwdField, pwd);
+		testBase.clickElement(login_loginBtn);
+		Thread.sleep(8000);
 	}
 }
