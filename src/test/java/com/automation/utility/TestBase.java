@@ -1,7 +1,10 @@
 package com.automation.utility;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -15,11 +18,18 @@ import org.openqa.selenium.io.FileHandler;
 public class TestBase {
 
 	WebDriver driver = null;
+	Properties props = new Properties();
 
-	public TestBase() {
+	public TestBase() throws IOException {
+		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.speaklanguages.com/");
+		
+		String rootFolderPath = System.getProperty("user.dir");
+		FileReader myFileObj = new FileReader(rootFolderPath + "/src/test/resources/appData.properties");
+		props.load(myFileObj);
+		
+		driver.get(props.getProperty("appUrl"));
 	}
 
 	public WebDriver getDriver() {
@@ -53,7 +63,7 @@ public class TestBase {
 	}
 
 	public void captureScreenshot(String screenShotName) throws IOException {
-		
+
 		// Fullpage screenshot
 		String rootPath = System.getProperty("user.dir");
 		// Call getScreenshotAs method to create image file

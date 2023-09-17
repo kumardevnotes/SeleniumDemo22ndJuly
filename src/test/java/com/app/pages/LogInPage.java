@@ -19,10 +19,11 @@ public class LogInPage {
 		this.testBase = testBase;
 	}
 	
-	public void loginIntoApp(String emailAddress, String pwd) {
+	public void loginIntoApp(String emailAddress, String pwd) throws Exception {
 		testBase.enterText(emailAddressField, emailAddress);
 		testBase.enterText(pwdField, pwd);
 		testBase.clickElement(loginBtn);
+		Thread.sleep(5000);
 	}
 	
 }

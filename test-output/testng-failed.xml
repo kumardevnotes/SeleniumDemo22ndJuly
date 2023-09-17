@@ -5,8 +5,8 @@
     <classes>
       <class name="com.app.tests.SpeakLangTests">
         <methods>
+          <include name="verifyAppLogin"/>
           <include name="afterMethod"/>
-          <include name="verifyHomePage"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.app.tests.SpeakLangTests -->
