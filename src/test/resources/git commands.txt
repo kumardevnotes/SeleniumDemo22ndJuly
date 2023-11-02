@@ -1,0 +1,26 @@
+git clone https://github.com/kumardevnotes/SeleniumDemosep30th.git
+
+How to push code from local to github using git version control commands ?
+git status
+git add --all
+git commit -m "added selenium script"
+git push
+
+
+How to pull code from github to local using git version control commands ?
+
+git status
+git reset --hard
+git fetch origin
+git pull
+
+Shortcuts while executing java programs:
+
+ctrl + s ---> save the java file
+ctrl + Shift + s --> to save all the modified files
+ctrl + x  --> to cut the code from editor
+ctrl + c  --> to copy the code
+ctrl + v --> to paste the code
+ctrl + z --> to revert the most recent change in your java file or editor
+ctrl + f --> to search for some key in the editor or java file
+ctrl + spacebar ---> after typing sysout, it will add System.out.println()
