@@ -14,3 +14,12 @@ Steps to follow:
 2. Launch signup page
 3. Enter all the fileds fname, lname, email address, passwrd, DOB
 4. Verify signup by login with the email address and passwrd that you entered inStep 3
+
+
+TestCase: Verify UserName
+
+1. Launch Chrome
+2. Launch App
+3. Login into app using valid logins
+4. Verify the username on the homepage, post login.
+

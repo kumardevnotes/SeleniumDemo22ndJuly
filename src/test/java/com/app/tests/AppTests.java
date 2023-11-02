@@ -12,54 +12,54 @@ import java.util.Properties;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
-public class SpeakLangTests {
+public class AppTests {
 
+	//Declare the class objects
 	TestBase testBase = null;
 	HomePage homePage = null;
 	LogInPage loginPage = null;
 	SignUpPage signUpPage = null;
+	
 	Properties props = new Properties();
 
 	@BeforeMethod
 	public void beforeMethod() throws IOException {
+		// Creating object and assigning the created object to the existing obj variable
+		//Initializing the objects
 		testBase = new TestBase();
 		homePage = new HomePage(testBase);
 		loginPage = new LogInPage(testBase);
 		signUpPage = new SignUpPage(testBase);
 	}
 
-	@Test (enabled = false)
-	public void verifyHomePage() throws Exception {
-		if (!homePage.verifyHomePageLoaded())
-			System.out.println("homePage verified without issues");
-		else {
-			testBase.captureScreenshot("verifyHomePage_Failed");
-			Assert.fail("Homepage verififcation failed. Please check");
-		}
-	}
-
 	@Test
-	public void verifySignUp() throws Exception {
-		String successMessageExpected  = "Thank you — now activate your account!";
-		homePage.navigateToSignUpPage();
-		signUpPage.signUPIntoApp();
-		String successMessageActual = signUpPage.getSignupSuccessMessage();
-		System.out.println(successMessageActual);
-		signUpPage.loginIntoApp();
-		testBase.captureScreenshot("verifySignUp");
-		Assert.assertEquals(successMessageActual, successMessageExpected, "Fail to Signup");
-	}
-	
-	@Test (enabled = false)
-	public void verifyAppLogin() throws Exception {
+	public void verifyUserName() throws Exception {
 		
 		String rootFolderPath = System.getProperty("user.dir");
 		FileReader myFileObj = new FileReader(rootFolderPath + "/src/test/resources/appData.properties");
 		props.load(myFileObj);
-
+		
+		String userEmailID = props.getProperty("appUserEmailID");
+		String password = props.getProperty("apppassword");;
+		String loggedInUserNameExpected = props.getProperty("appUserName");;
+		
 		homePage.navigateToLoginPage();
-		loginPage.loginIntoApp(props.getProperty("appUserEmailID"), props.getProperty("apppassword"));
+		loginPage.loginIntoApp(userEmailID, password);
+		String loggedInUserActual = homePage.returnLoggedInUserName();
+		
+		//Assert.assertEquals(loggedInUserActual, loggedInUserNameExpected, "userName verification failed! Please check");
+		
+		if(loggedInUserActual.equals(loggedInUserNameExpected)) {
+			System.out.println("username verification is successful!");
+		}
+		else {
+			testBase.captureScreenshot("verifyUserName_failed");
+			Assert.fail("userName verification failed! Please check");
+		}
+		
+		System.out.println("Testcase passed");
 	}
+
 
 	@AfterMethod
 	public void afterMethod() {

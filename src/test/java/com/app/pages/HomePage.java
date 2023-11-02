@@ -16,6 +16,10 @@ public class HomePage {
 	public By privacyPolicyLInk = By.linkText("Privacy policy");
 	public By termsOfUseLink = By.linkText("Terms of use");
 	public By contactUsLink = By.linkText("Contact us");
+	
+	
+	public By loggedInUser = By.xpath("//li[@id='nav_user']/a");
+	
 
 	WebDriver driver;
 	TestBase testBase;
@@ -48,9 +52,7 @@ public class HomePage {
 	}
 
 	public String returnLoggedInUserName() {
-		//
-		//
-		return "";
+		return testBase.getText(loggedInUser);
 	}
 
 }
